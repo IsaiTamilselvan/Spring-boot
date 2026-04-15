@@ -2,6 +2,7 @@ package com.example.demo;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 public class HelloController{
@@ -9,7 +10,7 @@ public class HelloController{
 NamePrint obj = new NamePrint();
 
     @GetMapping("/hello")
-    public String seyHello(){
-        return (obj.name()+" Hello, Spring Boot");
+    public String seyHello(@RequestParam String love){
+        return ("Hello, Spring Boot "+love);
     }
 }
