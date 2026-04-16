@@ -1,0 +1,16 @@
+package com.example.dailytask;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class user{
+    public int id=1;
+    public String name="thamiz";
+
+    @GetMapping("/json")
+    public user getUser(){
+        return new user();
+    }
+
+}
