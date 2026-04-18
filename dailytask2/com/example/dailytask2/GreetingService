@@ -1,0 +1,10 @@
+package com.example.dailytask2;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class GreetingService{
+    public String Greet(String name){
+        return ("hello "+name);
+    }
+}
