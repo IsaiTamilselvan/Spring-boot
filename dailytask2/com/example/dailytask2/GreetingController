@@ -1,0 +1,18 @@
+package com.example.dailytask2;
+
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@RestController
+public class GreetingController{
+    private final GreetingService greetingService;
+
+    public GreetingController(GreetingService greetingService) {
+        this.greetingService = greetingService;
+    }
+    @GetMapping("/hi")
+    public String hi(@RequestParam String name){
+        return (greetingService.Greet(name));
+    }
+}
